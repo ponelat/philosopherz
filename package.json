@@ -1,0 +1,23 @@
+{
+  "name": "philosopherz",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ponelat/philosopherz-presentation"
+  },
+  "keywords": [
+    "slides",
+    "presentation"
+  ],
+  "author": "Josh Ponelat <josh@ponelat.com>",
+  "license": "Copyright",
+  "bugs": {
+    "url": "https://github.com/ponelat/philosopherz-presentation/issues"
+  },
+  "homepage": "https://github.com/ponelat/philosopherz-presentation"
+}

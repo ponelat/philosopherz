@@ -1,0 +1,22 @@
+{
+  "name": "philosopherz",
+  "version": "0.0.0",
+  "authors": [
+    "Josh Ponelat <josh@ponelat.com>"
+  ],
+  "description": "A slide show presentation for Skeptical Philosophers website",
+  "license": "Copyright",
+  "homepage": "ponelat.github.io/philosopherz",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "reveal.js": "~3.0.0",
+    "jquery": "~2.1.3"
+  }
+}
