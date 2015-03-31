@@ -1,8 +1,40 @@
-@import (inline) 'bower_components/normalize.css/normalize.css';
+@import (inline) 'normalize.css/normalize.css';
 @import (inline) 'reveal.js/css/reveal.css';
+@import (inline) 'reveal.js/css/theme/white.css';
 
-@base-font-color: #eee;
+@color-pill-bg: rgba(140,180,133,0.9);
+@color-pill-text: #eee;
 
-body {
-  color: @base-font-color;
+dl.small, ul.small {
+  // margin-top: 3em;
+  font-size: 0.6em;
+}
+
+span[data-hours] {
+  font-size: 0.9em;
+  font: mono;
+}
+
+span[data-hours-total] {
+  font: mono;
+  font-size: 0.9em;
+  border-bottom: 1px solid #888;
+}
+
+#top-bar {
+  position: relative;
+  height: 10%;
+  width: 100%;
+  background: #eee;
+}
+
+a.pill {
+  display: inline-block;
+  color: @color-pill-text;
+  margin: 0.1em 0.2em;
+  padding: 0.3em 0.4em;
+  min-width: 4em;
+  text-align: center;
+  border-radius: 0.3em;
+  background: @color-pill-bg;
 }

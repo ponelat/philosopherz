@@ -17,14 +17,222 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
+        <div id="top-bar">
+          <a class="pill" href="#">Home</a>
+          <a class="pill" href="#/last" >End</a>
+        </div>
+        <div class="reveal">
+          <div class="slides">
+            <section>
+              <p>
+                <h2>How to use/view this proposal</h2>
+                <p>
+                  Press <span class="keyboard">&lt;space&gt;</span> to move forward<br>
+                </p>
+                <p class="small">
+                 You can use your arrow keys too, &larr; &uarr; &darr; &rarr; for finer detail
+                </p>
 
-        <script src=""></script>
+              </p>
+            </section>
+
+            <section>
+                <section>
+                  <p> Looking at the current setup, this is what I surmised </p>
+                  <a class="navigate-next" >&darr;</a>
+                </section>
+
+                <section>
+                  <h3> List of current features: </h3>
+                  <ul>
+                    <li> Sign-up/Members list </li>
+                    <li> Photo Albums </li>
+                    <li> Discussion board </li>
+                    <li> Mailing list </li>
+                    <li> Polls </li>
+                    <li> Calendar with Meetup.com dates </li>
+                    <li> Many comments and questions </li>
+                    <li> All-in-all an ongoing discussion </li>
+                  </ul>
+                </section>
+
+
+            </section>
+
+            <section>
+              <p>Since the project could take a number of different turns at present, it is best to work on iterations.
+                <br>
+                For instance, the very first thing we need to build is a platform that allows the continued flow of dialogue that is in Meetup.com
+                <br>
+                In other words, lets build a shell around Meetup.com with the obvious need to extend pass that a little on.
+                <a class="navigate-next" >&rarr;</a>
+              </p>
+            </section>
+
+            <section>
+              <h3>First we need to get to ground zero, the point where our innovations can come to the fore</h3>
+              <p class="center"><a class="navigate-down" >&rarr;</a></p>
+            </section>
+
+            <section>
+              <h3> What is key?  </h3>
+              <p class="center"><a class="navigate-down" >&darr;</a></p>
+
+              <p class="fragment">
+                The user log's in.
+                <br>
+                <small>
+                  <code>Technically we are going to use oAuth to authorize a user, either ourselves or through a social network site</code>
+                </small>
+              </p>
+              <p class="fragment">
+                Next meet-up
+                <br>
+                <small>
+                  Who, where, when, what and how of the community.<br>
+                  If something is going to happen, the user should know about it.
+                </small>
+              </p>
+
+              <p class="fragment">
+                The wall
+                <br>
+                <small>
+                  Open forum of discussion.
+                  For each section, whether it is a <b>page</b>, a <b>meet-up</b> or a possible <b>topic</b> <br>
+                  There will be a comment stream to allow user input
+                </small>
+              </p>
+
+            </section>
+
+            <section>
+              <h3> Framework  </h3>
+              <p class="center"><a class="navigate-down" >&darr;</a></p>
+
+              <p class="fragment">
+                WordPress
+                <br>
+                <small>
+                  Why?...<br>
+                  It has an enormous amount of support... with plug-ins, themes and available developers.<br>
+                  If I were to do this for myself, I wouldn't use WordPress<br>
+                  ...it isn't as fun (or easily testable ) as <b>rails</b> or a <b>SPA</b> app<br>
+                  But let's not waste innovation in the code, let's have better 'user' ideas!
+                </small>
+              </p>
+
+              <p class="fragment">
+                Users
+                <br>
+                <small>
+                  They don't like signing up. I don't like signing up.<br>
+                  The initial iteration will focus on Meetup.com's users<br>
+                  This way we can make use of their API
+                </small>
+              </p>
+
+              <p class="fragment">
+              Pages, posts and Meetups
+                <br>
+                <small>
+                  At it's heart WordPress is a blogging platform<br>
+                  The structure will revolve around Post-like items with comments<br>
+                  This will include injected content from Meetup.com
+                </small>
+              </p>
+
+            </section>
+
+            <section>
+              <section>
+                <h3> List of items in the 1st iteration and time/cost  </h3>
+                <a class="navigate-down" >&darr;</a>
+              </section>
+
+              <section>
+                <p> Items </p>
+                <dl class="small" data-hours-container >
+
+                  <div data-hours-container="">
+                    <dt>1. Setup </dt>
+                    <dd><span data-hours="2"></span>.... WordPress and hosting</dd>
+                    <dd class="subtotal">Subtotal = <span data-hours-total></span></dd>
+                  </div>
+
+                  <div data-hours-container="">
+                    <dt>2. Integrating Meetup.com user authenticate with oAuth</dt>
+                    <dd><span data-hours="2"></span>....Time to study Meetups.com's API and oAuth integration</span></dd>
+                    <dd><span data-hours="5"></span>....Implement so that: users from Meetup.com can log in with their details cached</dd>
+                    <dd class="subtotal">Subtotal = <span data-hours-total></span></dd>
+                  </div>
+
+                  <div data-hours-container="">
+                    <dt>3. Creation of "Meetup.com events" by hosts (or co-hosts)</dt>
+                    <dd><span data-hours="2"></span>.... Admin editor for CRUD operations</dd>
+                    <dd><span data-hours="3"></span>....Comment integration</dd>
+                    <dd><span data-hours="4"></span>....Integration of a Calendar plug-in with events notification</dd>
+                    <dd class="subtotal">Subtotal = <span data-hours-total></span></dd>
+                  </div>
+
+                  <div data-hours-container="">
+                    <dt>4. Customization of Theme</dt>
+                    <dd><span data-hours="3"></span>....For base customization and acquainting myself with the code</dd>
+                    <dd class="subtotal">Subtotal = <span data-hours-total></span></dd>
+                  </div>
+
+                  <br>
+                  <h4> Grand total: <span data-hours-total=""> </span> </h4>
+                </dl>
+              </section>
+
+
+            </section>
+
+            <section>
+              <section>
+                Off the top of my head here are a couple extensions that could be done
+                <a class="navigate-down" >&darr;</a>
+              </section>
+              <section>
+                <h3> Possible Features <a class="navigate-down">&darr;</a> </h3>
+                <ul class="small">
+                  <li class="fragment"> A 'featured works' page to showcase users' thoughts and ideas 5&plusmn;hrs</li>
+                  <li class="fragment"> Social networking integration (for more users) 4&plusmn;hrs</li>
+                  <li class="fragment"> Real-time chat room 8&plusmn;hrs</li>
+                  <li class="fragment"> An archive search, with related topics 4&plusmn;hrs </li>
+                  <li class="fragment"> Quick dictionary (click on word, links to dictionary) 2&plusmn;hrs</li>
+                  <li class="fragment"> Hot topic list, through twitter feed 4&plusmn;hrs</li>
+                </ul>
+              </section>
+
+            </section>
+
+            <section id="last">
+              <b> <i>Fin</i> </b>
+              <br />
+              <br>
+              Josh Ponelat
+              <a href="https://www.odesk.com/users/~011638af7825aa3eec">odesk.com/profile</a>
+              <br>
+              This application <a href="https://www.odesk.com/jobs/Integrate-meetup-com-API-into-custom-wordpress-template_~01a47518c445260766">odesk.com/application</a>
+              <br>
+              <a href="mailto:jponelat@gmail.com?subject=odesk-eugene-bright-philosopherz">email me</a>
+              | <a href="skype:josh.ponelat">skype: josh.ponelat</a>
+            </section>
+
+          </div>
+        </div>
+
+
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-2.1.3.min.js"><\/script>')</script>
+n
 
-        <script src=""></script>
-        <script>window.jQuery || document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/js/reveal.min.js"><\/script>')</script>
+        <script src="bower_components/reveal.js/js/reveal.js"></script>
+        <script>window.Reveal || document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.0.0/js/reveal.min.js"><\/script>')</script>
 
-        <script src="js/main.js"></script>
+        <script src="js/app.js"></script>
 
     </body>
 </html>
