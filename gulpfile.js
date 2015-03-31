@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
+var plumber = require('gulp-plumber');
 
 
 gulp.task('default', ['less']);
@@ -12,6 +13,7 @@ gulp.task('watch', function() {
 // Less compiling
 gulp.task('less', function() {
   return gulp.src('less/*.less')
+    .pipe(plumber())
     .pipe(less({
       paths: ['bower_components/']
     }))
