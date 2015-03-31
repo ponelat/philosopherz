@@ -23,13 +23,32 @@ span[data-hours-total] {
 
 #top-bar {
   position: relative;
-  height: 10%;
+  height: 7%;
   width: 100%;
   background: #eee;
+  padding-top: 3%;
+  padding-right: 4em;
+}
+
+#top-menu {
+  display: block;
+  position: relative;
+  float: right;
+  margin-right: 3em;
+}
+
+.title {
+  margin-top: 0;
+  margin-left: 2em;
+  float: left;
 }
 
 a.pill {
   display: inline-block;
+  text-decoration: none;
+  &:hover {
+    font-weight: bold;
+  }
   color: @color-pill-text;
   margin: 0.1em 0.2em;
   padding: 0.3em 0.4em;
